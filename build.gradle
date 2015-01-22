@@ -18,7 +18,7 @@ configurations.all {
 }
 
 repositories {
-    mavenCentral()
+    maven { url "http://nexus.eng.zkb.ch:8081/nexus/content/groups/public" }
 }
 
 sourceSets {
@@ -126,6 +126,12 @@ def searchMarker(tree, divider1, divider2, title, marker) {
         }
     }
 }
+
+task execute(type:JavaExec) {
+    main = "ch.softappeal.yass.tutorial.server.JettyServer"
+    classpath = sourceSets.tutorial.runtimeClasspath
+}
+
 
 task todo << {
     def divider1 = "========================================================================================================================"
