@@ -21,7 +21,7 @@ configurations.all {
 }
 
 repositories {
-    maven { url "http://nexus.eng.zkb.ch:8081/nexus/content/groups/public" }
+    
 }
 
 sourceSets {
