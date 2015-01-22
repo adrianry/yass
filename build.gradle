@@ -21,7 +21,7 @@ configurations.all {
 }
 
 repositories {
-    
+    mavenCentral()
 }
 
 sourceSets {
